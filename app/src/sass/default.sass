@@ -1,0 +1,165 @@
+/* personal default styles*/
+*
+    box-sizing: border-box
+
+html
+    font-family: 'Raleway', sans-serif
+    font-size: 14px
+
+a
+    display: block
+    text-decoration: none
+    color: inherit
+    transition: .3s linear
+    cursor: pointer
+
+a:hover 
+    color: inherit
+
+.page 
+    display: flex
+    flex-direction: column
+    overflow-x: hidden
+    min-height: 100vh
+    height: 1px
+    //
+    font-weight: 400
+    line-height: 1.2
+    color: #303030
+    background: #272733
+
+
+.content
+    flex-grow: 1
+
+img
+    display: block
+
+.button 
+    display: flex
+    text-align: center
+    transition: .3s linear
+    flex-direction: column
+    justify-content: center
+    cursor: pointer
+    //
+    max-width: 380px
+    padding: 15px 32px
+    border: 1px solid #FFFFFF
+    border-radius: 4px
+    text-transform: uppercase
+    color: rgba(255, 255, 255, 0.78)
+    background: #3E9CDC
+
+.button:hover 
+    color: #3E9CDC
+    border-color: #3E9CDC
+    background: #fff
+
+.form 
+    display: block
+
+.textform 
+    display: block
+    box-sizing: border-box
+    width: 100%
+    //
+    padding: 12px 10px
+    border: 1px solid #FFFFFF
+    border-radius: 3px
+    font-size: 1.5rem
+    color: #272733
+    background: rgba(255, 255, 255, 0.85)
+
+.textform:active,
+.textform:focus,
+.textform:hover 
+    outline: none
+
+.textform::placeholder 
+    color: rgba(0, 0, 0, 0.7)
+
+select
+    display: block
+    box-sizing: border-box
+    width: 100%
+    //
+    padding: 12px 10px
+    border: 1px solid #FFFFFF
+    border-radius: 3px
+    font-size: 1.5rem
+    color: #272733
+    background: rgba(255, 255, 255, 0.85)
+
+option
+    box-sizing: border-box
+    width: 100%
+    //
+    padding: 12px 10px
+    border: 1px solid #FFFFFF
+    border-radius: 3px
+    font-size: 1.5rem
+    color: #272733
+    background: rgba(255, 255, 255, 0.85)
+
+.range
+    display: block
+    width: 100%
+    //
+    margin-top: 20px
+
+input[type=range] 
+    -webkit-appearance: none /* Скрывает слайдер, чтобы можно было создать свой */
+    width: 100% /* Указание параметра ширины требуется для Firefox. */
+    //
+    max-height: 6px
+    border: 1px solid #fff
+    border-radius: 3px
+
+input[type=range]::-webkit-slider-thumb 
+  -webkit-appearance: none
+        background: red
+
+input[type=range]:focus 
+  outline: none /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+
+input[type=range]::-ms-track 
+    width: 100%
+    cursor: pointer
+    //
+    background:  lightgray /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+    border-color: transparent
+    color: transparent
+    background: red
+
+input[type=range]::-webkit-slider-thumb
+    -webkit-appearance: none
+    height: 20px
+    width: 20px
+    cursor: pointer
+    border: 4px solid #286690
+    border-radius: 3px
+    border-radius: 50%
+    background: #42A9ED
+ 
+// Тоже самое для Firefox
+input[type=range]::-moz-range-thumb
+    -webkit-appearance: none
+    height: 20px
+    width: 20px
+    cursor: pointer
+    border: 4px solid #286690
+    border-radius: 3px
+    border-radius: 50%
+    background: #42A9ED
+ 
+// Тоже самое для IE
+input[type=range]::-ms-thumb
+    -webkit-appearance: none
+    height: 20px
+    width: 20px
+    cursor: pointer
+    border: 4px solid #286690
+    border-radius: 3px
+    border-radius: 50%
+    background: #42A9ED

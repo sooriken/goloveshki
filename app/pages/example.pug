@@ -1,0 +1,30 @@
+include ../blocks/nav
+include ../blocks/header
+include ../blocks/footer
+
+doctype html
+html(lang="ru")
+    head
+    meta(charset="utf-8")    
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Контакты
+    // default css
+    link(rel="stylesheet" href="../css-min/default.min.css")
+    // normalize css
+    link(rel="stylesheet" href="../css-min/normalize.min.css")
+    // style css
+    link(rel="stylesheet" href="../css-min/style.min.css")
+    // fonts
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@400;800&display=swap" rel="stylesheet") 
+  
+body  
+    .page
+        +nav 
+        +header
+        .example__inner
+            h1 Example page!
+            img(src='../images-min/test.jpeg' alt="Photo Background")
+        +footer
+script(src="../js-bundle/example.bundle.js")
