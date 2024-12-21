@@ -1,6 +1,72 @@
 @import './blocks/*.sass'
 @import './pages/*.sass'
-   
-.content__inner
-    background: green
-    font-size: 50px
+
+$colorRed: #EF3340
+
+.content
+    min-height: calc(100vh - 140px)
+    //background-image: url(../../../images-min/welcome/welcome__bg-shadow--cloud.webp) 
+    background-repeat: no-repeat
+    background-position: 50% 0
+    background-size: auto 100% 
+    &__inner
+        //background: $colorRed
+        font-size: 50px
+    
+.welcome
+    text-transform: uppercase
+    padding: 100px 200px
+    &__logo
+        font-size: 200px
+        text-align: center
+        font-weight: bold
+    &__title
+        text-align: center
+        font-size: 50px
+        font-weight: 500
+        letter-spacing: 10px
+    &__text
+        font-size: 20px
+        text-align: center
+        max-width: 50%
+        margin: 100px auto 50px
+        font-family: "Ubuntu", serif
+    &__arrow
+        text-align: center
+.buy
+    padding: 100px 200px
+    &__inner
+        display: flex
+        justify-content: space-around
+    &__item
+        flex-grow: 1
+        max-width: 30%
+        padding: 25px
+        background-color: $colorRed
+        border-radius: 25px
+        &-image
+            width: 100%
+            aspect-ratio: 1/1
+            border-radius: 25px
+            overflow: hidden
+            background-color: black
+        &-img
+            width: 100%
+            height: auto
+        &-name
+            margin-top: 25px
+            text-align: center
+            text-transform: uppercase
+        &-button
+            background-color: black
+            border-radius: 25px
+            margin-top: 25px
+            padding: 15px
+            line-height: 1
+            text-align: center
+            &:hover
+                background-color: #fff
+                color: black
+
+
+

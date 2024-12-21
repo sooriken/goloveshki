@@ -1,6 +1,24 @@
 mixin content
-    .content__inner 
-        .content__title контент
-        input(type="text" id="date" autocomplete="off" placeholder="Выбор даты")
-        
-        
+    .content
+        .content__inner 
+            //input(type="text" id="date" autocomplete="off" placeholder="Выбор даты")
+            //welcome block
+            .welcome
+                .welcome__logo goloveshki
+                .welcome__title Разожги атмосферу:
+                .welcome__text Наши угли изготавливаются вручную с использованием только лучших материалов, чтобы обеспечить идеальное горение и насыщенный вкус.
+                .welcome__arrow ⌄
+            //buy block
+            .buy(id="blockBuy")
+                .buy__inner
+                    .buy__item
+                        .buy__item-image
+                            img.buy__item-img(src="../images-min/buy/buy__img-1.webp")
+                        .buy__item-name авито
+                        a.buy__item-button(href="#") купить
+                    .buy__item
+                        .buy__item-image
+                            img.buy__item-img(src="../images-min/buy/buy__img-2.jpg")
+                        .buy__item-name вб
+                        a.buy__item-button(href="#") купить
+                    

@@ -1,4 +1,28 @@
 .header
-    background-color: red
-    font-size: 50px
+    font-size: 30px
+    line-height: 40px
     text-align: center
+    display: flex
+    justify-content: space-between
+    padding: 50px 200px
+    &__logo
+        text-transform: uppercase
+        font-weight: bold
+    &__nav
+        display: flex
+        justify-content: flex-end
+        flex-grow: 1
+        font-family: "Ubuntu", serif
+        &-link
+            padding: 0 25px 
+            &:hover
+                text-decoration: underline
+            &:last-child
+                padding: 0 0 0 25px
+    &__opt
+        text-transform: uppercase
+        background-color: #EF3340
+        padding: 10px 40px
+        border-radius: 10px
+        font-size: 25px
+        line-height: 20px
