@@ -4,7 +4,6 @@
 $colorRed: #EF3340
 
 .content
-    min-height: calc(100vh - 140px)
     //background-image: url(../../../images-min/welcome/welcome__bg-shadow--cloud.webp) 
     background-repeat: no-repeat
     background-position: 50% 0
@@ -16,34 +15,129 @@ $colorRed: #EF3340
 .welcome
     text-transform: uppercase
     padding: 100px 200px
+    position: relative
+    min-height: calc(100vh - 140px)
+    display: flex
+    flex-direction: column
     &__logo
         font-size: 200px
         text-align: center
         font-weight: bold
+        z-index: 20
+        position: relative
     &__title
         text-align: center
         font-size: 50px
         font-weight: 500
         letter-spacing: 10px
+        z-index: 20
+        position: relative
     &__text
         font-size: 20px
         text-align: center
         max-width: 50%
         margin: 100px auto 50px
         font-family: "Ubuntu", serif
+        z-index: 20
+        position: relative
     &__arrow
         text-align: center
+        z-index: 20
+        width: 50px
+        height: 50px
+        border-right: 2px solid gray
+        border-bottom: 2px solid gray
+        transform: rotate(45deg)
+        margin: 0 auto
+        &-inner
+            flex-grow: 1
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+    &__skull
+        position: absolute
+        width: 250px
+        height: 250px
+        //background-color: $colorRed
+        z-index: 17
+        background-image: url(../../../images-min/skull/skull__right.png)
+        background-repeat: no-repeat
+        background-size: 100% auto
+        background-position: 50% 50%
+        &--top
+            left: 50%
+            top: -25%
+            transform: rotate(30deg)
+            z-index: 22
+            width: 300px
+            height: 300px
+            background-image: url(../../../images-min/skull/skull__anfas.png)
+        &--left
+            top: 2%
+            left: 11%
+            transform: rotate(60deg)
+            z-index: 22
+        &--right
+            right: 15%
+            bottom: 2%
+            transform: rotate(40deg)
+            z-index: 22
+            width: 350px
+            height: 350px
+            background-image: url(../../../images-min/skull/skull__left.png)
+        &--top-left
+            left: 30%
+            top: -10%
+            transform: rotate(45deg)
+            filter: blur(10px)
+            width: 125px    
+            height: 125px
+            background-image: url(../../../images-min/skull/skull__left.png)
+        &--top-right
+            right: 10%
+            top: 40%
+            transform: rotate(60deg)
+            filter: blur(10px)
+            width: 150px    
+            height: 150px
+            background-image: url(../../../images-min/skull/skull__anfas.png)
+        &--down-left
+            width: 180px
+            height: 180px
+            bottom: -5%
+            left: 25%
+            transform: rotate(150deg)
+            filter: blur(10px)
+            background-image: url(../../../images-min/skull/skull__anfas.png)
+        &--down-right
+            width: 110px
+            height: 110px
+            bottom: 5%
+            right: 35%
+            transform: rotate(20deg)
+            filter: blur(10px)
 .buy
     padding: 100px 200px
+    min-height: 100vh
+    display: flex
+    flex-direction: column
     &__inner
         display: flex
         justify-content: space-around
+        flex-grow: 1
     &__item
         flex-grow: 1
         max-width: 30%
         padding: 25px
         background-color: $colorRed
         border-radius: 25px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
         &-image
             width: 100%
             aspect-ratio: 1/1
@@ -57,6 +151,8 @@ $colorRed: #EF3340
             margin-top: 25px
             text-align: center
             text-transform: uppercase
+            font-weight: bold
+            color: #000
         &-button
             background-color: black
             border-radius: 25px
@@ -64,9 +160,123 @@ $colorRed: #EF3340
             padding: 15px
             line-height: 1
             text-align: center
+            font-family: "Ubuntu", serif
+            text-transform: uppercase
+            font-size: 25px
+            color: $colorRed
+            font-weight: bold
             &:hover
                 background-color: #fff
-                color: black
-
-
-
+                color: $colorRed
+            
+.about
+    padding: 100px 200px
+    min-height: 100vh
+    background-image: url(../../../images-min/about/about__img.webp)
+    background-repeat: no-repeat
+    background-size: 40% auto
+    background-position: 50% 50%
+    &__text
+        &-inner
+            border-bottom: 2px solid #fff
+            font-size: 30px
+            &:nth-child(1)
+                text-align: right
+                width: 35% 
+                margin: 5% 0 0 50%
+                padding-bottom: 10px
+            &:nth-child(2)
+                width: 35% 
+                margin-top: 10%
+                padding-bottom: 10px
+            &:nth-child(3)
+                text-align: right
+                width: 25% 
+                margin: 8% 0 0 65%
+                padding-bottom: 10px
+            
+.faq
+    min-height: 100vh
+    &__inner
+        display: flex
+        justify-content: space-between
+        padding: 100px 200px
+    &__image
+        width: calc(50% - 25px)
+    &__img
+        max-width: 100%
+        height: auto
+    &__item
+        font-size: 25px
+        padding: 25px
+        background-color: $colorRed
+        color: #000
+        &--active > .faq__item-text 
+            display: block
+        &:nth-child(1)
+            border-radius: 25px 25px 0 0
+        &:last-child
+            border-radius: 0 0 25px 25px
+        &-inner
+            width: calc(50% - 25px)
+        &-label
+            display: flex
+            justify-content: space-between
+        &-ask
+            font-size: 40px
+            line-height: 40px
+            font-weight: bold
+        &-button
+            width: 40px
+            height: 40px
+            background-color: #000
+        &-text
+            margin-top: 25px
+            font-family: "Ubuntu", serif
+            display: none
+            
+.opt
+    background-image: url(../../../images-min/opt/opt__background.webp)
+    background-size: auto 100% 
+    background-position: 0 0
+    background-repeat: no-repeat
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    &__inner
+        padding: 100px 200px
+        height: 100%
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+    &__form
+        margin-top: 25px
+        &:nth-child(1)
+            margin-top: 0
+        &-inner
+            padding: 25px
+            background-color: $colorRed
+            border-radius: 25px
+            max-width: 60%
+            margin: 0 auto
+            flex-grow: 1
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+    &__textform
+        border-radius: 10px
+    &__button
+        background-color: black
+        border-radius: 25px
+        margin-top: 25px
+        padding: 15px
+        line-height: 1
+        text-align: center
+        font-size: 25px
+        text-transform: uppercase
+        font-family: "Ubuntu", serif
+        font-weight: bold
+        color: $colorRed
+        &:hover
+            background-color: #fff
+            color: $colorRed
