@@ -78,8 +78,8 @@ $colorRed: #EF3340
             background-image: url(../../../images-min/skull/skull__anfas.png)
         &--left
             top: 2%
-            left: 11%
-            transform: rotate(60deg)
+            left: 6%
+            transform: rotate(40deg)
             z-index: 22
         &--right
             right: 15%
@@ -213,6 +213,9 @@ $colorRed: #EF3340
         color: #000
         &--active > .faq__item-text 
             display: block
+        &--active > .faq__item-label > .faq__item-button
+            transform: rotate(45deg)
+        
         &:nth-child(1)
             border-radius: 25px 25px 0 0
         &:last-child
@@ -226,6 +229,7 @@ $colorRed: #EF3340
             font-size: 40px
             line-height: 40px
             font-weight: bold
+            max-width: calc(100% - 50px)
         &-button
             width: 40px
             height: 40px
@@ -235,6 +239,13 @@ $colorRed: #EF3340
             font-family: "Ubuntu", serif
             display: none
             
+.video
+    width: 100%
+    aspect-ratio: 16/9
+    background-color: $colorRed
+    &__inner
+        padding: 100px 200px
+    
 .opt
     background-image: url(../../../images-min/opt/opt__background.webp)
     background-size: auto 100% 
