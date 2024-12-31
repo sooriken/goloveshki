@@ -1,5 +1,5 @@
 .header
-    font-size: 30px
+    font-size: 2.5rem
     line-height: 40px
     text-align: center
     display: flex
@@ -21,10 +21,29 @@
                 text-decoration: underline
             &:last-child
                 padding: 0 0 0 25px
-    &__opt
-        text-transform: uppercase
-        background-color: #EF3340
-        padding: 10px 40px
-        border-radius: 10px
-        font-size: 25px
-        line-height: 20px
+@media(max-width: 1480px)
+    .header
+        padding: 25px 100px
+@media(max-width: 960px)
+    .header__nav-link
+        padding: 0 15px
+        &:last-child
+            padding: 0 0 0 15px
+@media(max-width: 820px)
+    .header__nav-link
+        padding: 0 10px
+        &:last-child
+            padding: 0 0 0 10px
+@media(max-width: 680px)
+    .header
+        padding: 15px 50px
+@media(max-width: 420px)
+    .header
+        &__logo
+            font-size: 4rem
+        &__nav
+            font-size: 4rem
+            &-link
+                padding: 0 5px
+                &:last-child
+                    padding: 0 0 0 5px

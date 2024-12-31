@@ -51,7 +51,7 @@ mixin content
                             .faq__item-label 
                                 .faq__item-ask Выделяют ли наши угли запах?
                                 .faq__item-button 
-                            .faq__item-text Наши угли ручной работы отличаются высоким качеством и не выделяют неприятных запахов. Они создаются из натурального материала, что обеспечивает чистое и приятное вкусовое восприятие. Вы сможете насладиться настоящим ароматом ароматических веществ, раскрывающихся при курении кальяна или жаре мангала.
+                            .faq__item-text Наши угли ручной работы отличаются высоким качеством и не выделяют неприятных запахов. Они создаются из натурального материала, что обеспечивает чистое и приятное вкусовое восприятие. Вы сможете насладиться настоящим ароматом нот, раскрывающихся при курении кальяна или жаре мангала.
                         .faq__item
                             .faq__item-label
                                 .faq__item-ask Насколько быстро прогорают?
@@ -61,17 +61,27 @@ mixin content
                             .faq__item-label
                                 .faq__item-ask Подходят ли для всех кальянов?  
                                 .faq__item-button 
-                            .faq__item-text Да, наши угли универсальны и подходят для использования в большинстве кальянов и мангалов, обеспечивая отличные результаты независимо от типа оборудования.
+                            .faq__item-text Наши угли универсальны и подходят для использования в большинстве кальянов и мангалов. Они обеспечивают отличные результаты с любым оборудованием. Неважно, готовите ли вы на улице или дома, качество наших углей сделает процесс приготовления особенным. Попробуйте и убедитесь сами!
             //video block
             .video__inner
-                <video class="video" controls>
-                    <source src="../video/video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                .video__block
+                    .video__text.video__text--mobile угли для кальяна
+                    <video class="video" controls>
+                        <source src="../video/video__1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
+                    .video__text.video__text--desktop угли для кальяна
+                .video__block
+                    .video__text угли для мангала
+                    <video class="video" controls>
+                        <source src="../video/video__2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
+                    
+                
             //opt block
             .opt(id="blockOpt")
                 .opt__inner
-                    .opt__title
                     .opt__form-inner
                         .opt__form
                             input.opt__textform.textform(type="text" placeholder="Имя")

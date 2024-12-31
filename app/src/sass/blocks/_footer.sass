@@ -1,5 +1,5 @@
 .footer
-    padding: 100px 200px
+    padding: 50px 200px
     display: flex
     justify-content: space-between
     width: 100%
@@ -7,19 +7,65 @@
         display: flex
     &__logo
         margin-right: 50px
-        font-size: 30px
+        font-size: 2rem
         line-height: 50px
         text-transform: uppercase
         font-weight: bold
     &__contact
-        font-size: 30px
+        font-size: 2.5rem
         line-height: 50px
         font-family: "Ubuntu", serif
     &__link
         width: 50px
         height: 50px
-        border-radius: 50%
+        border-radius: 10px
         background-color: #EF3340
         margin-left: 25px
+        position: relative
+        overflow: hidden
+        &:first-child
+                border-radius: 50%
         &-inner
             display: flex
+        &-img
+            position: absolute
+            top: 0
+            bottom: 0
+            width: 50px
+            height: 50px
+@media(max-width: 1480px)
+    .footer
+        padding: 25px 100px
+@media(max-width: 1280px)
+    .footer
+        &__logo
+            line-height: 30px
+        &__contact
+            line-height: 30px
+        &__link
+            margin-top: 5px
+            width: 30px
+            height: 30px
+            &-img
+                width: 30px
+                height: 30px
+@media(max-width: 680px)
+    .footer
+        padding: 15px 50px
+        &__logo
+            margin-right: 25px
+        &__link
+            margin-top: 10px
+            width: 20px
+            height: 20px
+            border-radius: 5px  
+            margin-left: 15px
+            &-img
+                width: 20px
+                height: 20px
+@media(max-width: 420px)
+    .footer
+        &__logo
+            font-size: 4rem
+        &__contact
+            font-size: 4rem
