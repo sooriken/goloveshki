@@ -13,7 +13,36 @@ $colorRed: #EF3340
     &__inner
         //background: $colorRed
         font-size: 3.6rem
-    
+        &--blur
+            filter: blur(10px)
+// popup
+.popup
+    display: none
+    position: absolute
+    width: calc(100vw - 100px)
+    height: 100vh
+    z-index: 30
+    top: 0
+    text-align: center
+    font-size: 6rem
+    &__inner
+        position: absolute
+        width: 50%
+        height: 70%
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        background-color: $colorRed 
+        padding: 100px
+        border-radius: 50px
+    &__blur
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+.content__inner
+    //filter: blur(10px)
+// welcome block    
 .welcome
     text-transform: uppercase
     @include blockPadding($leftRight: 100px,$topDown: 200px)
@@ -70,51 +99,67 @@ $colorRed: #EF3340
         background-repeat: no-repeat
         background-size: 100% auto
         background-position: 50% 50%
+        //position: sticky
+        &-inner
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
         &--top
             left: 50%
-            top: -25%
+            top: -15%
             transform: rotate(30deg)
             width: 18%
             background-image: url(../../../images-min/skull/skull__anfas.png)
+            position: absolute
         &--left
             top: 2%
             left: 6%
             transform: rotate(40deg)
             z-index: 22
+            position: absolute
         &--right
-            right: 13%
+            right: 17%
             bottom: 2%
             transform: rotate(40deg)
             z-index: 22
             width: 20%
             background-image: url(../../../images-min/skull/skull__left.png)
+            position: absolute
         &--top-left
             left: 30%
-            top: -10%
+            top: 10%
             transform: rotate(45deg)
             filter: blur(10px)
             width: 12%
             background-image: url(../../../images-min/skull/skull__left.png)
+            position: sticky
         &--top-right
-            right: 5%
+            left: 90%
             top: 40%
+            //bottom: 60%
             transform: rotate(60deg)
             filter: blur(10px)
             width: 13%
             background-image: url(../../../images-min/skull/skull__anfas.png)
+            position: sticky
         &--down-left
             width: 14%
-            bottom: -5%
-            left: 25%
+            //bottom: 20%
+            //bottom: 0%
+            left: 15%
+            top: 60%
             transform: rotate(150deg)
             filter: blur(10px)
             background-image: url(../../../images-min/skull/skull__anfas.png)
+            position: sticky
         &--down-right
             width: 7%
-            bottom: 5%
-            right: 35%
+            top: 80%
+            left: 50%
             transform: rotate(20deg)
             filter: blur(10px)
+            position: sticky
 .buy
     @include blockPadding($leftRight: 100px,$topDown: 200px)
     display: flex
@@ -149,6 +194,7 @@ $colorRed: #EF3340
             text-transform: uppercase
             font-weight: bold
             color: #000
+            font-size: 3rem
         &-button
             background-color: black
             border-radius: 25px
@@ -497,7 +543,7 @@ $colorRed: #EF3340
 @media((max-width: 960px) and (max-height: 800px))
     .welcome__skull
         &--top
-            top: -40%
+            top: -15%
             left: 50%
             width: 25% 
             &-left
@@ -511,7 +557,7 @@ $colorRed: #EF3340
             left: 0
         &--right
             width: 20%
-            right: 0
+            right: 5%
         &--down
             &-left
                 width: 18%

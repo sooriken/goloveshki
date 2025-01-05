@@ -1,34 +1,39 @@
 mixin content
     .content
+        //popup продажи
+        .popup
+            .popup__blur
+            .popup__inner 1231
         .content__inner 
             //input(type="text" id="date" autocomplete="off" placeholder="Выбор даты")
             //welcome block
             .welcome
+                .welcome__skull-inner
+                    .welcome__skull.welcome__skull--top 
+                    .welcome__skull.welcome__skull--top-left
+                    .welcome__skull.welcome__skull--top-right
+                    .welcome__skull.welcome__skull--left
+                    .welcome__skull.welcome__skull--right
+                    .welcome__skull.welcome__skull--down-left
+                    .welcome__skull.welcome__skull--down-right
                 .welcome__logo goloveshki
                 .welcome__title Разожги атмосферу:
-                .welcome__text Наши угли изготавливаются вручную с использованием только лучших материалов, чтобы обеспечить идеальное горение и насыщенный вкус.
+                .welcome__text наши угли изготавливаются вручную с использованием лучших материалов и горят в четыре раза дольше обычных
                 .welcome__arrow-inner
                     a.welcome__arrow(href="#blockBuy") 
-                .welcome__skull.welcome__skull--top 
-                .welcome__skull.welcome__skull--top-left
-                .welcome__skull.welcome__skull--top-right
-                .welcome__skull.welcome__skull--left
-                .welcome__skull.welcome__skull--right
-                .welcome__skull.welcome__skull--down-left
-                .welcome__skull.welcome__skull--down-right
             //buy block
             .buy(id="blockBuy")
                 .buy__inner
                     .buy__item
                         .buy__item-image
                             img.buy__item-img(src="../images-min/buy/buy__img-1.webp")
-                        .buy__item-name авито
-                        a.buy__item-button(href="#") купить
+                        .buy__item-name для кальяна
+                        a.buy__item-button(href="https://www.wildberries.ru/catalog/208288038/detail.aspx") купить
                     .buy__item
                         .buy__item-image
                             img.buy__item-img(src="../images-min/buy/buy__img-2.webp")
-                        .buy__item-name вб
-                        a.buy__item-button(href="#") купить
+                        .buy__item-name для мангала
+                        a.buy__item-button(href="https://www.wildberries.ru/catalog/208295175/detail.aspx") купить
             //about block
             .about(id="blockAbout")
                 .about__image
