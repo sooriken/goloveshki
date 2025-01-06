@@ -38,7 +38,7 @@ mixin content
             .about(id="blockAbout")
                 .about__image
                     .about__text-inner
-                        .about__text Кокосовая скорлуп
+                        .about__text Кокосовая скорлупа
                         .about__text Крахмал топиокового дерева
                     .about__text-inner
                         .about__text Древесная берёза класса А
@@ -87,17 +87,11 @@ mixin content
             //opt block
             .opt(id="blockOpt")
                 .opt__inner
-                    .opt__form-inner
-                        .opt__form
-                            input.opt__textform.textform(type="text" placeholder="Имя")
-                        .opt__form
-                            input.opt__textform.textform(type="text" placeholder="Телефон")
-                        .opt__form
-                            input.opt__textform.textform(type="text" placeholder="Город")
-                        .opt__form
-                            input.opt__textform.textform(type="text" placeholder="Организация")
-                        .opt__form
-                            input.opt__textform.textform(type="text" placeholder="Кол-во для заказа")
-                        a.opt__button(href="#") Отправить заявку
-
-                        
+                    form.opt__form-inner(action="https://api.web3forms.com/submit" method="POST")
+                        input(type="hidden" name="access_key" value="61435dad-9b83-4ff2-b65d-d57194361e62") 
+                        input.opt__textform.textform(type="text" name="name" required placeholder="Имя")
+                        input.opt__textform.textform(type="tel" name="phone" required placeholder="Телефон")
+                        input.opt__textform.textform(type="text" name="city" required placeholder="Город")
+                        input.opt__textform.textform(type="text" name="organization" required placeholder="Организация")
+                        input.opt__textform.textform(type="number" name="number" required placeholder="Кол-во для заказа")
+                        button.opt__button(type="submit") Отправить заявку
